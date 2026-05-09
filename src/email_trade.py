@@ -41,15 +41,15 @@ def fn_email(currency,
     msg = EmailMessage()
     msg.set_content(f'{response_llm}')
     msg['Subject'] = f'{currency}: {stay_exit_message}{buy_sell_message} - {model}'
-    msg['From'] = "maspytradelog@gmail.com"
-    msg['To'] = "maspytradelog@gmail.com"
+    msg['From'] = ""
+    msg['To'] = ""
 
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
 
     with smtplib.SMTP(smtp_server, smtp_port) as server:
         server.starttls()
-        server.login("maspytradelog@gmail.com", 'cvwztaqgbklqbqie')
+        server.login("", '')
         server.send_message(msg)
 
     return None
