@@ -1,0 +1,11 @@
+# -- Dependency Directories --
+.venv/
+.idea/
+
+# -- Build & Output Directories --
+dist/
+build/
+log_files/
+
+# -- Sensitive Files --
+.env
